@@ -1,0 +1,12 @@
+<%- include('./components/header', {title: Product.name}) %>
+  <body>    <div class="Container">
+    <h1>Product Name: <%= Product.name%></h1>
+    <h1>Product Price: <%= Product.price%></h1>
+    <h1>Product Category: <%= Product.category%></h1>
+    <a href="/products/<%=Product.name%>/edit"><h1>Edit</h1></a>
+    <form method="POST" action="/products/<%=Product.name%>?_method=DELETE">
+      <button type="submit">Delete</button>
+    </form>
+    <a href="/"><h1>Shop</h1></a></div>
+  </body>
+</html>

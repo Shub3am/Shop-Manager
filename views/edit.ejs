@@ -1,0 +1,20 @@
+<%- include('./components/header', {title: Product.name}) %>
+  <body>
+    <div class="Data Container">
+      <h2>
+        Product Name:
+        <h2 id="Name"><%= Product.name%></h2>
+      </h2>
+      <h2>
+        Product Price:
+        <h2 id="Price"><%= Product.price%></h2>
+      </h2>
+      <h2>
+        Product Category:
+        <h2 id="Category"><%= Product.category%></h2>
+      </h2>
+      <button class="Data-Edit">Edit Product</button>
+    </div>
+    <script src="/js/edit.js"></script>
+  </body>
+</html>

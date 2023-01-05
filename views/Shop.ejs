@@ -1,0 +1,17 @@
+<%- include('./components/header', {title: "SHOP"}) %>
+  <body><div class="Container">
+    <h1 class="Page-Title">Shop</h1>
+    <table class="Products">
+      <tr class="table-heading"><th>Product</th><th>Price</th><th>Category</th></tr>
+      <% for (Product of Products){ %>
+      <tr>
+        <th><a href="/products/<%=Product.name%>"><%=Product.name%></a></th>
+        <th><a href="/products/<%=Product.name%>"><%=Product.price%></a></th>
+        <th><a href="/products/<%=Product.name%>"><%=Product.category%></a></th>
+      </tr>
+      <% } %>
+    </table>
+
+    <a href="/products/create"><button class="create-btn">Create New</button></a></div>
+  </body>
+</html>

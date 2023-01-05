@@ -1,0 +1,28 @@
+<%- include('./components/header', {title: "Create New Product"}) %>
+  <body>
+    <div class="Container">
+    <form method="post" action="/products/create">
+      <input
+        type="text"
+        placeholder="Enter Product Name"
+        name="name"
+        required
+      />
+      <input
+        type="number"
+        min="0"
+        placeholder="Enter Product Price"
+        name="price"
+        required
+      />
+      <select name="category">
+        <option value="Non Veg">Non Veg</option>
+        <option value="vegatable">Vegatable</option>
+        <option value="fruits">Fruits</option>
+      </select>
+      <input type="submit" />
+    </form>
+    <a href="/"><h1>Go Back</h1></a>
+  </div>
+  </body>
+</html>
