@@ -1,0 +1,122 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  cursor: url("/cursor.svg"), default;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #303841;
+}
+.Container {
+  background-image: linear-gradient(
+    174.2deg,
+    rgba(255, 244, 228, 1) 7.1%,
+    rgba(240, 246, 238, 1) 67.4%
+  );
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.048);
+  border-radius: 1em;
+  width: 25%;
+  margin: 25vh auto;
+  padding: 1.5em 0;
+}
+
+.Container {
+  animation-name: Container;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes Container {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+h1,
+p {
+  color: #374955;
+  text-transform: capitalize;
+}
+.Page-Title {
+  font-size: 1.35em;
+  text-align: center;
+  width: 80%;
+  text-transform: uppercase;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+}
+.go-back-btn {
+  margin: 1em 0 0 0;
+  padding: 0.5em;
+  font-weight: 600;
+  background: none;
+  font-size: 1.25em;
+  color: white;
+  background: #303841;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.go-back-btn:hover {
+  background-color: black;
+  color: white;
+}
+.create-form {
+  margin: 0.25em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.create-form > input,
+select {
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  padding: 1em 1em;
+  background: #303841;
+  color: white;
+  border-radius: 5px;
+  margin: 0.5em;
+}
+::placeholder {
+  color: white;
+}
+input[type="submit"] {
+  background: #303841;
+  color: white;
+  font-size: 1.35em;
+  padding: 0.35em;
+}
+@media (max-width: 576px) {
+  .Container {
+    width: 90%;
+    margin: 10vh auto;
+    font-size: 2.5vh;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .Container {
+    width: 80%;
+    font-size: 2.5vh;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .Container {
+    width: 80%;
+    font-size: 2.5vh;
+  }
+}

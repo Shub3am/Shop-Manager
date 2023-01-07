@@ -1,7 +1,9 @@
-<%- include('./components/header', {title: "Create New Product"}) %>
+<%- include('./components/header', {title: "Create New Product", css: "/css/create.css"}) %>
   <body>
     <div class="Container">
-    <form method="post" action="/products/create">
+      <h1 class="Page-Title">Create A New Product</h1>
+    <form method="post"  class="create-form" action="/products/create">
+
       <input
         type="text"
         placeholder="Enter Product Name"
@@ -11,7 +13,7 @@
       <input
         type="number"
         min="0"
-        placeholder="Enter Product Price"
+        placeholder="Enter Product Price (Number)"
         name="price"
         required
       />
@@ -22,7 +24,7 @@
       </select>
       <input type="submit" />
     </form>
-    <a href="/"><h1>Go Back</h1></a>
+    <a href="/"><h1 class="go-back-btn">Go Back</h1></a>
   </div>
   </body>
 </html>

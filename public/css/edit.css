@@ -1,3 +1,6 @@
 * {
-  background-color: black;
+  font-family: "Montserrat", sans-serif;
+  cursor: url("/cursor.svg"), default;
+  margin: 0;
+  padding: 0;
 }

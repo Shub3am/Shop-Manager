@@ -1,12 +1,24 @@
-<%- include('./components/header', {title: Product.name}) %>
+<%- include('./components/header', {title: Product.name, css: "/css/singleproduct.css"}) %>
   <body>    <div class="Container">
-    <h1>Product Name: <%= Product.name%></h1>
-    <h1>Product Price: <%= Product.price%></h1>
-    <h1>Product Category: <%= Product.category%></h1>
-    <a href="/products/<%=Product.name%>/edit"><h1>Edit</h1></a>
+    <table>
+      <tr>
+        <th>Name:</th>
+        <th class="item"><%=Product.name%></th>
+      </tr>
+      <tr>
+        <th>Price:</th>
+        <th class="item"><%=Product.price%></th>
+      </tr>
+      <tr>
+        <th>Category:</th>
+        <th class="item"><%=Product.category%></th>
+      </tr>
+    </table>
+    <div class="utility"><a href="/"><button>Shop</button></a>
+    <a href="/products/<%=Product.name%>/edit"><button>Edit</button></a>
     <form method="POST" action="/products/<%=Product.name%>?_method=DELETE">
       <button type="submit">Delete</button>
     </form>
-    <a href="/"><h1>Shop</h1></a></div>
+    </div></div>
   </body>
 </html>

@@ -6,7 +6,11 @@ const path = require("path");
 const mongo = require("mongoose");
 const SingleProduct = require("./Models/SingleProduct");
 mongo.set("strictQuery", true);
-mongo.connect("mongodb://127.0.0.1:27017/Shop");
+
+mongo
+  .connect("mongodb://127.0.0.1:27017/Shop")
+  .then((res) => console.log("Connected"))
+  .catch((err) => console.log("error from mongo connect"));
 
 App.use(method("_method"));
 App.use(express.json());
